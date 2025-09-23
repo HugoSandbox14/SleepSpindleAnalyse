@@ -25,8 +25,9 @@ How to read and interpret graphics :
 
 The first graphic "Représentation des artefacts" represent what we considere as an artefact in the signal. All point over 50µV or under -50µV are considered as artefac of the record because in sigma band the signal amplitude usually stay in this interval. So this graphic is just a representation of what will be not interpreted as correct record, if sleep spindle are detected by the pipeline with too much artefact (more than 10 --> arbitrary value) points in, it will not be considered as a sleep spindle.
 
-The second graphic "Hypnogram" on the left bottom represent a classic hypnogram where we can see the repartition of the deepness of the sleep with the different stage
+The second graphic "Hypnogram" on the left bottom represent a classic hypnogram where we can see the repartition of the deepness of the sleep with the different stage. Under this Hypnogram it's a representation of the distribution of the spindle detection combined with the hypnogram. In fact on single line correspond to a spindle and the color correspond to the stage where was detected the spindle. A green line correspond to a spindle detected in N2 stage, yellow in N3 stage orange in N1 and Wake stage and red in REM and unknown stage. Usually Sleep spindles are located in N2 and N3 stage (more in N2 or N3) but never in REM stage. So if we see a lot of green and yellow it mean that the result of the detection is relevent with the definition of a sleep spindle.
 
+The third graphic "Evenement" represent what is concretly considered as a sleep spindle, it's like a zoom on the signal on a sleep spindle (litle piece of the signal between)
 
 
 
