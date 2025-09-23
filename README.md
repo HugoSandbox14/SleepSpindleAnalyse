@@ -23,7 +23,9 @@ the path should look like : C:\Users\YourName\Desktop\data.h5
 
 How to read and interpret graphics : 
 
-The first graphic "Représentation des artefacts" represent what we considere as an artefact in the signal. All point over 50µV or under -50µV are considered as artefac of the record because in sigma band the signal amplitude usually stay in this interval. So this graphic is just a representation of what will be not interpreted as correct record.  
+The first graphic "Représentation des artefacts" represent what we considere as an artefact in the signal. All point over 50µV or under -50µV are considered as artefac of the record because in sigma band the signal amplitude usually stay in this interval. So this graphic is just a representation of what will be not interpreted as correct record, if sleep spindle are detected by the pipeline with too much artefact (more than 10 --> arbitrary value) points in, it will not be considered as a sleep spindle.
+
+The second graphic "Hypnogram" on the left bottom represent a classic hypnogram where we can see the repartition of the deepness of the sleep with the different stage
 
 
 
