@@ -2,6 +2,7 @@
 This Script can analyse an EEG record during sleep with a focus on Sleep Spindles. It is adapted to DREEM open datasets. It work with .h5 files with at least the EEG raw signal (µV) and the hypnogram. The channel used can be modified in the script. This scripts are writed in Python langage in 3.12.0 version and needs some packages to work.
 
 ===========================================================================
+
 Before to run the code you must install some packages with this command in the terminal:
 
 >pip install mne matplotlib numpy h5py scipy
