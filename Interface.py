@@ -7,8 +7,6 @@ import Pipeline as PL
 import Outils_2 as O
 import matplotlib.pyplot as plt
 
-# C:\\Users\\hugop\\Desktop\\data_1.h5
-
 current_canvas = None
 
 Width, Height = 450, 330  
@@ -76,5 +74,6 @@ def get_stats():
 
 button = tk.Button(root, text="Analyse", command= get_stats)
 button.place(x = 760, y = 17)
+
 
 root.mainloop()
