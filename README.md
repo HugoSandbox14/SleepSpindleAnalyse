@@ -27,7 +27,7 @@ The first graphic "Représentation des artefacts" represent what we considere as
 
 The second graphic "Hypnogram" on the left bottom represent a classic hypnogram where we can see the repartition of the deepness of the sleep with the different stage. Under this Hypnogram it's a representation of the distribution of the spindle detection combined with the hypnogram. In fact on single line correspond to a spindle and the color correspond to the stage where was detected the spindle. A green line correspond to a spindle detected in N2 stage, yellow in N3 stage orange in N1 and Wake stage and red in REM and unknown stage. Usually Sleep spindles are located in N2 and N3 stage (more in N2 or N3) but never in REM stage. So if we see a lot of green and yellow it mean that the result of the detection is relevent with the definition of a sleep spindle.
 
-The third graphic "Evenement" represent what is concretly considered as a sleep spindle, it's like a zoom on the signal on a sleep spindle (litle piece of the signal between)
+The third graphic "Evenement" represent what is concretly considered as a sleep spindle, it's like the signal zoom on a sleep spindle (litle piece of the signal between the red space). Under this graphic there is the entier signal with red and black verticals dashed lines. the red line is the location of the current spindle that we see on the "Evenement" graphic that we can change by pressing ">>" ("next") button or "<<" button (previous one) the number between arrows mean the number of event that we want to skip 
 
 
 
