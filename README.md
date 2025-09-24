@@ -1,36 +1,134 @@
-# SleepSpindleAnalyse
-This Script can analyse an EEG record during sleep with a focus on Sleep Spindles. It is adapted to DREEM open datasets. It work with .h5 files with at least the EEG raw signal (µV) and the hypnogram. The channel used can be modified in the script. This scripts are writed in Python langage in 3.12.0 version and needs some packages to work.
+# **SleepSpindleAnalyse**
 
-===========================================================================
+This script can analyze an EEG recording during sleep with a focus on **sleep spindles**.
+It is adapted to the **DREEM open datasets** and works with `.h5` files that contain at least the **EEG raw signal (µV)** and the **hypnogram**.
+The EEG channel used can be modified directly in the script.
 
-Before to run the code you must install some packages with this command in the terminal:
+These scripts are written in **Python 3.12.0** and require some external packages to run.
 
->pip install mne matplotlib numpy h5py scipy
+---
 
-I advice you to use a python virtual environment but it's not necessary to run correctly the code
+### **Installation**
 
-===========================================================================
+Before running the code, you must install the required packages using the following command in your terminal:
 
-To download a data file to test the script you can go on : https://github.com/Dreem-Organization/dreem-learning-open?tab=readme-ov-file and select one file and run the script with. This is the DREEM open source data set. One file is corresponding at one night EEG recording of one persone. You can also go on https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=drive_link and download one of the file that I used to test and ajust my scripts.
+```bash
+pip install mne matplotlib numpy h5py scipy
+```
 
-To run correctly the script you must run the "Interface.py" file after changing the variable "File" in the "Paramètres.py" file with the path of the data file.h5 you just downloaded from DREEM open source data set.
+I recommend using a **Python virtual environment**, but it is **not mandatory** for the script to work correctly.
 
-If you want you can just run the "Interface.py" file, write the path of your data file in the entry of the window and click on "Analyse" button, you will see some graphics and informations on sleep spindles and macro structure of sleep
+---
 
-the path should look like : C:\Users\YourName\Desktop\data.h5
+### **Download Example Data**
 
-===========================================================================
+To test the script, you can download a data file from the **DREEM open-source dataset**:
+[https://github.com/Dreem-Organization/dreem-learning-open](https://github.com/Dreem-Organization/dreem-learning-open)
 
-How to read and interpret graphics : 
+Each file corresponds to **one full-night EEG recording** of one person.
 
-The first graphic "Représentation des artefacts" represent what we considere as an artefact in the signal. All point over 50µV or under -50µV are considered as artefac of the record because in sigma band the signal amplitude usually stay in this interval. So this graphic is just a representation of what will be not interpreted as correct record, if sleep spindle are detected by the pipeline with too much artefact (more than 10 --> arbitrary value) points in, it will not be considered as a sleep spindle.
+Alternatively, you can download one of the files I used to test and adjust my scripts on my Google Drive:
+[Google Drive link](https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=drive_link)
 
-The second graphic "Hypnogram" on the left bottom represent a classic hypnogram where we can see the repartition of the deepness of the sleep with the different stage. Under this Hypnogram it's a representation of the distribution of the spindle detection combined with the hypnogram. In fact on single line correspond to a spindle and the color correspond to the stage where was detected the spindle. A green line correspond to a spindle detected in N2 stage, yellow in N3 stage orange in N1 and Wake stage and red in REM and unknown stage. Usually Sleep spindles are located in N2 and N3 stage (more in N2 or N3) but never in REM stage. So if we see a lot of green and yellow it mean that the result of the detection is relevent with the definition of a sleep spindle.
+---
 
-The third graphic "Evenement" represent what is concretly considered as a sleep spindle, it's like the signal zoom on a sleep spindle (litle piece of the signal between the red space). Under this graphic there is the entier signal with red and black verticals dashed lines. the red line is the location of the current spindle that we see on the "Evenement" graphic that we can change by pressing ">>" ("next") button or "<<" button (previous one) the number between arrows mean the number of event that we want to skip 
+### **How to Run the Script**
+
+1. After downloading a `.h5` data file, **update the variable `File`** in the `Paramètres.py` file with the **path to your data file**.
+   Example:
+
+   ```
+   C:\Users\YourName\Desktop\data.h5
+   ```
+2. Run the `Interface.py` file.
+3. Alternatively, you can just launch `Interface.py`, **enter the path** to your data file in the window, and click the **"Analyse"** button.
+   The program will then display plots and information about **sleep spindles** and the **macrostructure of sleep**.
+
+---
+
+### **Understanding the Graphics**
+
+#### **1. Artefact Representation ("Représentation des artefacts")**
+
+This graph shows what is considered an **artefact** in the signal.
+The displayed signal is **filtered in the sigma band** (12–16 Hz).
+
+* All points **above +50 µV** or **below –50 µV** are marked as artefacts because, in the sigma band, the signal amplitude usually stays within this range.
+* If a detected spindle contains **too many artefact points (more than 10, arbitrary threshold)**, it will **not be counted** as a real sleep spindle.
+
+---
+
+#### **2. Hypnogram and Spindle Distribution**
+
+The bottom-left plot shows:
+
+* **Classic hypnogram**: the different **sleep stages** over time.
+* **Spindle distribution**: each line represents a detected spindle, and its **color corresponds to the stage** where it was detected:
+
+  * **Green** → N2 stage
+  * **Yellow** → N3 stage
+  * **Orange** → N1 or Wake stage
+  * **Red** → REM or Unknown stage
+
+Sleep spindles are **normally found in N2 and N3 stages** (more in N2).
+If most detected spindles are green or yellow, the detection results are **consistent** with the expected definition of sleep spindles.
+
+---
+
+#### **3. Spindle Event View ("Événement")**
+
+This plot shows **one detected sleep spindle** in detail:
+
+* The top graph is a **zoomed-in view** of the EEG signal around the spindle (highlighted area).
+* Below it, you see the **entire signal**, with:
+
+  * **Red dashed lines** → current spindle location (the one shown above).
+  * **Black dashed lines** → spindle candidates **rejected due to artefacts**.
+
+Use the **">>"** (next) and **"<<"** (previous) buttons to navigate through all detected spindles.
+The number between the arrows sets how many events to skip when pressing the button.
+
+---
+
+#### **4. Summary Information**
+
+Below the plots, you’ll see:
+
+* **Number of detected spindles** in N2 and N3 stages.
+* **Artefact statistics** for the recording.
+
+---
+
+#### **5. Sleep Stage Proportion**
+
+The final graph shows the **distribution of sleep stages** using a bar plot.
+Typical proportions are approximately:
+
+* N1 → \~5%
+* N2 → \~45%
+* N3 → \~25%
+* REM → \~25%
+
+---
+
+### **Project Goal**
+
+The main goal of this small project is **to improve my programming skills** by:
+
+* Learning how to **open and read files**,
+* Understanding how datasets work,
+* Applying **basic statistics**,
+* Presenting results with **plots and descriptions**.
+
+This is **only an exercise project**, not a validated sleep spindle detection tool, even though some results **match well with the expected definition** of sleep spindles.
+
+---
+
+**Thank you for reading!**
+
+---
 
 
 
-
-
+  
 
