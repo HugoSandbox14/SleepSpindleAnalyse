@@ -7,8 +7,6 @@ import tkinter as tk
 from matplotlib.figure import Figure
 import affichage as a
 
-# C:\\Users\\hugop\\Desktop\\data_1.h5
-
 class Analyse_Object:
    
     def __init__(self,file):
@@ -59,5 +57,6 @@ class Analyse_Object:
     
    
     
+
 
     
