@@ -28,12 +28,13 @@ def affiche_figure(figure,x,y,width,height):
     return canvas
 
 def get_stats():
+    global current_canvas
     Analyse = C.Analyse_Object(entry.get())
     affiche_figure(Analyse.figure_artefact,10,100,Width,Height)
     affiche_figure(Analyse.figure_distribution,10,450,Width,Height)
     current_canves = affiche_figure(Analyse.figure_spindle,510,100,Width,Height)
     affiche_figure(Analyse.figure_hypnogram,1020,100,Width,Height)
-    a.get_stat(Analyse.dico_spindle,Analyse.dico_hypno)
+    # a.get_stat(Analyse.dico_spindle,Analyse.dico_hypno)
     text_1 = tk.Label(root, text=Analyse.msg_global, width = 72, height = 10, justify = 'left',font=("Comic", 11))
     text_1.place(x=465,y=450)
     text_2 = tk.Label(root, text=Analyse.msg_hypno, width = 55, height = 10, justify = 'left',font=("Comic", 11))
@@ -74,6 +75,5 @@ def get_stats():
 
 button = tk.Button(root, text="Analyse", command= get_stats)
 button.place(x = 760, y = 17)
-
 
 root.mainloop()

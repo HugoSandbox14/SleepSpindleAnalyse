@@ -11,7 +11,7 @@ Les données utilisées viennent du DREEM Open Dataset (DOD-H)
 """
 ################################## 1 ère étape #######################################
 
-print("Etape 1 Import des données...")
+# print("Etape 1 Import des données...")
 
 def import_data(file):
     Raw = h5py.File(file, 'r')
@@ -24,7 +24,7 @@ def import_data(file):
 
 ################################## 2 ère étape #######################################
 
-print("Etape 2 nettoyage des fréquences...")
+# print("Etape 2 nettoyage des fréquences...")
 
 def clean_data_frequency(raw, fmin, fmax,canal, sf):
     info = mne.create_info(ch_names=[canal], sfreq=sf, ch_types='eeg')
@@ -72,7 +72,7 @@ def raw_to_sigma(signal):
 
 ################################## 3 ère étape #######################################
 
-print("Etape 3 --> nettoyage des artefacts...")
+# print("Etape 3 --> nettoyage des artefacts...")
 
 """
 Nettoyage des artefacts : point > 50 µV
@@ -102,7 +102,7 @@ def detect_artefact(signal, treshold = 50):
 
 ################################## 4 ère étape #######################################
 
-print("Etape 4 --> transformée de Hilbert...")
+# print("Etape 4 --> transformée de Hilbert...")
 
 """
 analyse du signal hilbert : le but est de trouver des pic d'activité bref et soudain
@@ -113,7 +113,7 @@ analyse du signal hilbert : le but est de trouver des pic d'activité bref et so
 
 ################################## 5 ère étape #######################################
 
-print("Etape 5 --> parcourir le signal...")
+# print("Etape 5 --> parcourir le signal...")
 
 """
 Parcour du signal par fenetre de 30 secondes. calcul de la moyenne et de l'ecart type de la fenêtre 
@@ -163,7 +163,7 @@ def detect_spindle_bis(piece,tresh_1,tresh_2,start):
 
 ################################## 6 ème étape #######################################
 
-print("Etape 6 filtre des faux fuseaux...")
+# print("Etape 6 filtre des faux fuseaux...")
 
 """
 on supprime les faux évènements c'est à dire les pic d'activité trop court (< 0.5 seconde)
@@ -196,7 +196,7 @@ def filtre_faux_fuseaux(liste,mask):
         for x,y in liste:
             count = O.ft_count(mask[x:y],1)
             if count > 10:
-                print(f"spindle supprimé (artefact) {O.sec_to_hms(x//250)} à {O.sec_to_hms(y//250)}")
+                # print(f"spindle supprimé (artefact) {O.sec_to_hms(x//250)} à {O.sec_to_hms(y//250)}")
                 liste_artefact.append((x,y))
             else :
                 liste_clean.append((x,y))

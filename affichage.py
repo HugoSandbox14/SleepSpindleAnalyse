@@ -28,22 +28,6 @@ def figure_artefact(signal,mask):
 
         return figure
 
-def figure_hypnogram(hypno):
-        time = np.arange(len(hypno))
-
-        labels = ["Wake","N1","N2","N3","REM"]
-        figure = Figure(figsize = (8,6), dpi = 75)
-        ax = figure.add_subplot(111)
-        ax.plot(time,hypno)
-        ax.set_title(f"Répartition des stades")
-        ax.set_xlabel("Stades")
-        ax.set_ylabel("Temps par stade (minute)")
-        ax.legend(title=labels,loc='upper left')
-        ax.set_yticks([0,1,2,3,4])  
-        ax.set_yticklabels(labels)
-
-        return figure
-
 def figure_distribution(signal, event,hypno):
     dico_color = {
         "0" : "orange",
@@ -131,16 +115,16 @@ def figure_hypnogram(hypno):
 
         return figure
 
-def get_stat(dico_event, dico_hypno):
-    keys = dico_event.keys()
-    for key in keys:
-        nb_spindle = len(dico_event[key])
-        temps_stade = dico_hypno[key]
-        if temps_stade == 0:
-            print(f"stade {key} | --> X\n")          
-        else:   
-            print(f"stade {key} --> {nb_spindle} Spindle detecté | ratio --> {round((nb_spindle/len(O.dico_to_list(dico_event))) * 100,1)}%", end = " ")
-            print(f"temps en stade --> {O.sec_to_hms(temps_stade)} | --> {round(nb_spindle/(temps_stade // 60),2)} spindle par minutes")
+# def get_stat(dico_event, dico_hypno):
+#     keys = dico_event.keys()
+#     for key in keys:
+#         nb_spindle = len(dico_event[key])
+#         temps_stade = dico_hypno[key]
+#         if temps_stade == 0:
+#             print(f"stade {key} | --> X\n")          
+#         else:   
+#             print(f"stade {key} --> {nb_spindle} Spindle detecté | ratio --> {round((nb_spindle/len(O.dico_to_list(dico_event))) * 100,1)}%", end = " ")
+#             print(f"temps en stade --> {O.sec_to_hms(temps_stade)} | --> {round(nb_spindle/(temps_stade // 60),2)} spindle par minutes")
 
 
 def msg_artefact(nb_artefact,liste_artefact,nb_point): 
@@ -171,4 +155,3 @@ def msg_hypno(hypno):
         msg += f"temps passé en stade {labels[i]} --> {round(count[i]/total*100,2)}%\n"
     
     return msg
-

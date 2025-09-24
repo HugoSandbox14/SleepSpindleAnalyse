@@ -36,7 +36,6 @@ class Analyse_Object:
         self.msg_hypno = a.msg_hypno(self.hypnogram)
         self.msg_global = self.msg_spindle + "\n" + self.msg_artefact 
         
-
     def next(self,x):
         print("index = ",self.spindle_index)
         print(f"{self.spindle_index} + {x} < {len(self.liste_spindle_N2_N3)} = {self.spindle_index + x < len(self.liste_spindle_N2_N3)}")
@@ -45,7 +44,6 @@ class Analyse_Object:
             print(f"donc --> index = {self.spindle_index}")
             self.figure_spindle = a.figure_spindle(self.signal_raw,self.signal_sigma,self.dico_spindle,self.spindle_index,self.liste_artefact)
 
-
     def prev(self,x):
         print("index = ",self.spindle_index)
         print(f"{self.spindle_index} + {x} > 0 = {self.spindle_index + x > 0}")
@@ -53,10 +51,3 @@ class Analyse_Object:
             self.spindle_index -= x
             print(f"donc --> index = {self.spindle_index}")
             self.figure_spindle = a.figure_spindle(self.signal_raw,self.signal_sigma,self.dico_spindle,self.spindle_index,self.liste_artefact)
-
-    
-   
-    
-
-
-    
