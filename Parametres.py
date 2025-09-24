@@ -1,4 +1,4 @@
-File = "C:\\Users\\hugop\\Desktop\\data_1.h5"
+File = "your/data/file/path/data.h5"
 Channel = "C3_M2"
 SF = 250
 Fmin,Fmax = 0.3, 20
@@ -13,4 +13,5 @@ Dict_wave = {
 
 Time = 1                                 # taille de la fenêtre glissante en minute
 Fenetre = int(250 * 60 * Time)           # fenetre glissante (car frequence d'échantillonage = 250)
+
 
