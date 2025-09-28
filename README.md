@@ -27,8 +27,7 @@ To test the script, you can download a data file from the **DREEM open-source da
 
 Each file corresponds to **one full-night EEG recording** of one person.
 
-Alternatively, you can download one of the files I used to test and adjust my scripts on my Google Drive:
-[Download Here](https://drive.google.com/uc?export=download&id=1E42RW1AsX6By_oXP5eRR6ONXeyKraps-)
+Alternatively, you can download one of the files I used to test and adjust my scripts on my Google Drive: [Download Here](https://drive.google.com/uc?export=download&id=1E42RW1AsX6By_oXP5eRR6ONXeyKraps-)
 
 ---
 
