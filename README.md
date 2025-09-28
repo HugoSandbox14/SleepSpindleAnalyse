@@ -29,6 +29,8 @@ Each file corresponds to **one full-night EEG recording** of one person.
 
 Alternatively, you can download one of the files I used to test and adjust my scripts on my Google Drive:
 [Google Drive link](https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=drive_link)
+Here if it does not work :
+[Google Drive link](https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=sharing)
 
 ---
 
