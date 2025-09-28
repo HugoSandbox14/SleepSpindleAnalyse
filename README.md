@@ -31,7 +31,7 @@ Alternatively, you can download one of the files I used to test and adjust my sc
 [Google Drive link](https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=drive_link)
 
 Here if it does not work :
-[Google Drive link](https://drive.google.com/file/d/1E42RW1AsX6By_oXP5eRR6ONXeyKraps-/view?usp=sharing)
+[Download Here](https://drive.google.com/uc?export=download&id=1E42RW1AsX6By_oXP5eRR6ONXeyKraps-)
 
 ---
 
