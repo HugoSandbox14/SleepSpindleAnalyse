@@ -10,13 +10,24 @@ These scripts are written in **Python 3.12.0** and require some external package
 
 ### **Installation**
 
-Before running the code, you must install the required packages using the following command in your terminal:
+Before running the code, you must install packages.
+
+I recommend using a **Python virtual environment** in the current directory, but it is **not mandatory** for the script to work correctly.
 
 ```bash
-pip install mne matplotlib numpy h5py scipy
+python -m venv VirtualEnv
+```
+and activate it with :
+
+```bash
+.\VirtualEnv\Scripts\activate
 ```
 
-I recommend using a **Python virtual environment**, but it is **not mandatory** for the script to work correctly.
+All the required packages are in the file Requirements.txt and you can install them directly using :
+
+```bash
+pip install -r Requirements.txt
+```
 
 ---
 
