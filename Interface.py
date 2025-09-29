@@ -2,7 +2,7 @@ import tkinter as tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import Class as C
 from Parametres import File
-import affichage as a
+import Affichage as a
 import Pipeline as PL
 import Outils_2 as O
 import matplotlib.pyplot as plt
