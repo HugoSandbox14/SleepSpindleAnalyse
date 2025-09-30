@@ -1,6 +1,6 @@
 import Pipeline as PL
-import Outils_2 as O
-from Parametres import File, Dict_wave, Channel, SF, Fmin, Fmax, Fenetre
+import Tools as O
+from Settings import File, Dict_wave, Channel, SF, Fmin, Fmax, Window
 from scipy.signal import hilbert
 import numpy as np
 import tkinter as tk 
@@ -114,18 +114,6 @@ def figure_hypnogram(hypno):
         ax.set_ylabel("Temps (minutes)")
 
         return figure
-
-# def get_stat(dico_event, dico_hypno):
-#     keys = dico_event.keys()
-#     for key in keys:
-#         nb_spindle = len(dico_event[key])
-#         temps_stade = dico_hypno[key]
-#         if temps_stade == 0:
-#             print(f"stade {key} | --> X\n")          
-#         else:   
-#             print(f"stade {key} --> {nb_spindle} Spindle detecté | ratio --> {round((nb_spindle/len(O.dico_to_list(dico_event))) * 100,1)}%", end = " ")
-#             print(f"temps en stade --> {O.sec_to_hms(temps_stade)} | --> {round(nb_spindle/(temps_stade // 60),2)} spindle par minutes")
-
 
 def msg_artefact(nb_artefact,liste_artefact,nb_point): 
     ratio_artefact = nb_artefact/nb_point * 100

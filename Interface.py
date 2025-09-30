@@ -1,10 +1,10 @@
 import tkinter as tk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import Class as C
-from Parametres import File
-import Affichage as a
+from Settings import File
+import Display as D
 import Pipeline as PL
-import Outils_2 as O
+import Tools as O
 import matplotlib.pyplot as plt
 
 current_canvas = None
@@ -34,7 +34,7 @@ def get_stats():
     affiche_figure(Analyse.figure_distribution,10,450,Width,Height)
     current_canves = affiche_figure(Analyse.figure_spindle,510,100,Width,Height)
     affiche_figure(Analyse.figure_hypnogram,1020,100,Width,Height)
-    # a.get_stat(Analyse.dico_spindle,Analyse.dico_hypno)
+    # D.get_stat(Analyse.dico_spindle,Analyse.dico_hypno)
     text_1 = tk.Label(root, text=Analyse.msg_global, width = 72, height = 10, justify = 'left',font=("Comic", 11))
     text_1.place(x=465,y=450)
     text_2 = tk.Label(root, text=Analyse.msg_hypno, width = 55, height = 10, justify = 'left',font=("Comic", 11))

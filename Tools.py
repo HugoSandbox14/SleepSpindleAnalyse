@@ -41,16 +41,6 @@ def is_near(tuple1, tuple2, duration_between):
         return True
     else:
         return False
-    
-def affiche_liste(liste, start = None, end = None):
-    print("==========================")
-    print("affichage de la liste")
-    print("==========================")
-
-    for i, el in enumerate(liste[start:end]):
-        print(el, end = " ")
-        if i % 20 == 0:
-            print()
 
 def sec_to_hms(time):
     h = 0
