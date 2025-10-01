@@ -1,6 +1,6 @@
 # **SleepSpindleAnalyse**
 
-This script can analyze an EEG recording during sleep with a focus on **sleep spindles**.
+This script can analyze an EEG recording during sleep with a focus on **sleep spindles**. A sleep spindle is a short electric event which can apear during sleep, it is related to memorization, and cognitiv performances. 
 It is adapted to the **DREEM open datasets** and works with `.h5` files that contain at least the **EEG raw signal (µV)** and the **hypnogram**.
 The EEG channel used can be modified directly in the script. This project is more like a prototype software for Sleep Spindle description than a Data Analyse Project.
 
@@ -44,14 +44,14 @@ Alternatively, you can download one of the files I used to test and adjust my sc
 
 ### **How to Run the Script**
 
-1. After downloading a `.h5` data file, **update the variable `File`** in the `Paramètres.py` file with the **path to your data file**.
+1. After downloading a `.h5` data file, **update the variable `File`** in the `Settings.py` file with the **path to your data file**.
    Example:
 
    ```
    C:\Users\YourName\Desktop\data.h5
    ```
-2. Run the `Interface.py` file.
-3. Alternatively, you can just launch `Interface.py`, **enter the path** to your data file in the window, and click the **"Analyse"** button.
+2. Run the `Display.py` file.
+3. Alternatively, you can just launch `Display.py`, **enter the path** to your data file in the window, and click the **"Analyse"** button.
    The program will then display plots and information about **sleep spindles** and the **macrostructure of sleep**.
 
 ---
