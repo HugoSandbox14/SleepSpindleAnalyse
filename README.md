@@ -50,7 +50,7 @@ Alternatively, you can download one of the files I used to test and adjust my sc
    ```
    C:\Users\YourName\Desktop\data.h5
    ```
-2. Run the `Display.py` file.
+2. Run the `Interface.py` file.
 3. Alternatively, you can just launch `Display.py`, **enter the path** to your data file in the window, and click the **"Analyse"** button.
    The program will then display plots and information about **sleep spindles** and the **macrostructure of sleep**.
 
