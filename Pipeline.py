@@ -119,7 +119,7 @@ the window to define a threshold that determines if there is a sudden peak of ac
 """
 
 def detect_spindle(signal): 
-    window = S.Fenetre
+    window = S.Window
     run = True
     x = 0
     liste_spindle = []
@@ -269,5 +269,6 @@ def count_stage(hypno):
     }
     for el in hypno:
         dico[str(el)] += 30
+
 
     return dico
